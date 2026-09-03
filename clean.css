@@ -1,0 +1,325 @@
+:root {
+  --bg: #08101f;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --text: #0f172a;
+  --text-muted: #475569;
+  --accent: #38bdf8;
+  --accent-strong: #8b5cf6;
+  --accent-soft: rgba(56, 189, 248, 0.16);
+  --border: rgba(56, 189, 248, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: radial-gradient(circle at top center, rgba(56, 189, 248, 0.15), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.1), transparent 18%),
+    linear-gradient(180deg, #09101d 0%, #0d1730 100%);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.08), transparent 18%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.slide-container {
+  width: min(100%, 980px);
+  background: var(--bg-card);
+  border-radius: 32px;
+  padding: 44px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: var(--text);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(24px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin: 0 auto;
+}
+
+.slide-container::before {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.16), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.08), transparent 22%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.slide {
+  display: none;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 12px;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideIn 0.72s cubic-bezier(.16,.84,.32,1) both;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 14% 12%, rgba(56, 189, 248, 0.12), transparent 14%),
+    radial-gradient(circle at 88% 82%, rgba(236, 72, 153, 0.1), transparent 12%);
+  opacity: 0.95;
+  z-index: -1;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.985);
+    filter: blur(0.6px);
+  }
+  60% {
+    filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.22), rgba(139, 92, 246, 0.18));
+  color: #06202a;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.12), 0 6px 18px rgba(56,189,248,0.06);
+  animation: floatBadge 4.5s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.02;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+  /* subtler, less neon gradient for better readability */
+  background: linear-gradient(90deg, #1e90ff 0%, #7c3aed 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  color: #0f172a;
+  margin: 1.6rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid rgba(56, 189, 248, 0.28);
+}
+
+.section-subtitle {
+  color: #0284c7;
+  margin-top: 1.2rem;
+}
+
+h3 {
+  font-size: 1rem;
+  color: var(--accent-strong);
+  margin: 1.2rem 0 0.5rem;
+}
+
+p,
+li {
+  /* force darker text for body copy to improve contrast on white cards */
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  margin-top: 18px;
+  color: var(--text);
+}
+
+.highlight {
+  /* make highlight block more neutral while keeping accent on left border */
+  background: rgba(249, 250, 251, 0.9);
+  border-left: 6px solid #22c1ff;
+  padding: 20px 24px;
+  border-radius: 0 14px 14px 0;
+  margin: 20px 0;
+  box-shadow: 0 10px 26px rgba(15,23,42,0.06);
+}
+
+.highlight p {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  margin-top: 18px;
+  padding-left: 0;
+}
+
+li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 14px;
+}
+
+li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  color: #38bdf8;
+  font-size: 1.2rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  margin-top: 24px;
+  position: static;
+}
+
+button {
+  min-width: 140px;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #38bdf8, #8b5cf6);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 20px 35px rgba(56, 189, 248, 0.2);
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 44px 88px rgba(56, 189, 248, 0.28), 0 12px 30px rgba(139,92,246,0.12);
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(56,189,248,0.16);
+  outline-offset: 4px;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.counter {
+  color: #64748b;
+  font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .slide-container {
+    padding: 32px 24px;
+    width: min(100%, 100%);
+  }
+
+  .slide {
+    padding-bottom: 18px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 22px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .counter {
+    order: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    padding: 16px;
+  }
+
+  .slide-container {
+    border-radius: 24px;
+    padding: 24px 18px;
+  }
+
+  .badge {
+    font-size: 0.72rem;
+    padding: 0.65rem 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    gap: 10px;
+  }
+}
