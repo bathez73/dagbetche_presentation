@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Les réponses ne sont accessibles que via Firebase Admin côté serveur.
+    // Ne pas autoriser l'accès depuis le navigateur.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

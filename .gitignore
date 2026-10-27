@@ -1,1 +1,7 @@
-.vercel
+node_modules/
+.env
+.env.*
+!.env.example
+*serviceAccount*.json
+*service-account*.json
+.DS_Store
