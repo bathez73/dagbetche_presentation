@@ -1,0 +1,399 @@
+{
+  "jeunes": {
+    "q1": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "Jamais",
+        "Rarement",
+        "Parfois",
+        "Souvent",
+        "Très souvent",
+        "Je préfère ne pas répondre"
+      ]
+    },
+    "q2": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "J’en parle à un proche",
+        "Je m’isole ou j’attends que ça passe",
+        "J’écoute de la musique, je regarde des vidéos ou je joue",
+        "Je sors ou je fais une activité physique",
+        "Je me repose ou je dors",
+        "Je cherche des conseils en ligne",
+        "Je contacte un professionnel ou un service d’écoute",
+        "Autre"
+      ]
+    },
+    "q2_other": {
+      "type": "text",
+      "required": false,
+      "max": 280
+    },
+    "q3": {
+      "type": "multi",
+      "required": false,
+      "allowed": [
+        "Respiration, méditation ou prière",
+        "Écrire ou dessiner",
+        "Passer du temps avec des amis ou ma famille",
+        "Me concentrer sur les cours ou le travail",
+        "Consommer de l’alcool ou une autre substance",
+        "Rien de particulier",
+        "Autre"
+      ]
+    },
+    "q3_other": {
+      "type": "text",
+      "required": false,
+      "max": 280
+    },
+    "q4": {
+      "type": "multi",
+      "required": false,
+      "allowed": [
+        "Parler à quelqu’un",
+        "Bouger ou sortir",
+        "Me reposer",
+        "Faire une activité que j’aime",
+        "Demander de l’aide à un professionnel",
+        "Aucune pour le moment",
+        "Autre"
+      ]
+    },
+    "q4_other": {
+      "type": "text",
+      "required": false,
+      "max": 280
+    },
+    "q5": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "Ami(e) ou partenaire",
+        "Famille",
+        "Écoutant(e), psychologue ou autre professionnel",
+        "Enseignant(e), éducateur/trice ou encadrant(e)",
+        "Personne pour le moment",
+        "Je ne sais pas"
+      ]
+    },
+    "q6": {
+      "type": "multi",
+      "required": false,
+      "allowed": [
+        "Peur d’être jugé(e) ou de ne pas être compris(e)",
+        "Je pense que ce n’est pas assez grave",
+        "Je ne sais pas vers qui me tourner",
+        "Le coût ou le manque de temps",
+        "Je préfère gérer seul(e)",
+        "Je crains que ce ne soit pas confidentiel",
+        "Rien ne m’en empêche",
+        "Autre"
+      ]
+    },
+    "q6_other": {
+      "type": "text",
+      "required": false,
+      "max": 280
+    },
+    "q7": {
+      "type": "text",
+      "required": false,
+      "max": 700
+    },
+    "q8": {
+      "type": "multi",
+      "required": false,
+      "allowed": [
+        "Humeur et émotions",
+        "Stress ou charge mentale",
+        "Sommeil et énergie",
+        "Relations et sentiment d’isolement",
+        "Événements ou activités de la journée",
+        "Habitudes qui m’aident quand ça ne va pas",
+        "Aucun"
+      ]
+    },
+    "q9": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "Moins de 2 minutes",
+        "2 à 5 minutes",
+        "Plus de 5 minutes",
+        "Je ne sais pas",
+        "Cela ne m’intéresse pas"
+      ]
+    },
+    "q10": {
+      "type": "multi",
+      "required": false,
+      "allowed": [
+        "Un bilan émotionnel rapide et régulier",
+        "Voir l’évolution de mon humeur et de mes habitudes dans le temps",
+        "Des idées d’activités ou d’exercices pour les moments difficiles",
+        "Des rappels que je peux choisir ou désactiver",
+        "Trouver facilement un service d’écoute ou un professionnel",
+        "Aucune"
+      ]
+    },
+    "q11": {
+      "type": "multi",
+      "required": false,
+      "allowed": [
+        "Ne pas demander mon nom ni mes coordonnées",
+        "Pouvoir choisir ce que je renseigne",
+        "Comprendre qui peut voir mes réponses",
+        "Pouvoir effacer mes données",
+        "Ne pas recevoir d’alerte sans mon accord",
+        "Autre"
+      ]
+    },
+    "q11_other": {
+      "type": "text",
+      "required": false,
+      "max": 280
+    },
+    "q12": {
+      "type": "text",
+      "required": false,
+      "max": 700
+    },
+    "q13": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "Pas du tout intéressé(e)",
+        "Peu intéressé(e)",
+        "Assez intéressé(e)",
+        "Très intéressé(e)",
+        "Je ne sais pas"
+      ]
+    },
+    "q14": {
+      "type": "text",
+      "required": false,
+      "max": 700
+    },
+    "q15": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "18 à 20 ans",
+        "21 à 25 ans",
+        "26 ans ou plus",
+        "Je préfère ne pas répondre"
+      ]
+    },
+    "q16": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "Femme",
+        "Homme",
+        "Intersexe",
+        "Autre / je souhaite le préciser",
+        "Je préfère ne pas répondre"
+      ]
+    },
+    "q16_other": {
+      "type": "text",
+      "required": false,
+      "max": 280
+    },
+    "q17": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "Au collège ou au lycée",
+        "Étudiant(e)",
+        "En emploi ou en apprentissage",
+        "En recherche d’emploi",
+        "Autre",
+        "Je préfère ne pas répondre"
+      ]
+    },
+    "q17_other": {
+      "type": "text",
+      "required": false,
+      "max": 280
+    }
+  },
+  "pros": {
+    "q1": {
+      "type": "multi",
+      "required": false,
+      "allowed": [
+        "Humeur et émotions",
+        "Stress ou charge mentale ressentie",
+        "Sommeil et niveau d’énergie",
+        "Relations et sentiment d’isolement",
+        "Activités habituelles et changements de routine",
+        "Habitudes mobilisées pour faire face aux difficultés",
+        "Autre"
+      ]
+    },
+    "q1_other": {
+      "type": "text",
+      "required": false,
+      "max": 280
+    },
+    "q2": {
+      "type": "text",
+      "required": false,
+      "max": 700
+    },
+    "q3": {
+      "type": "multi",
+      "required": false,
+      "allowed": [
+        "Se tourner vers un proche ou s’isoler",
+        "Maintenir ou interrompre ses activités",
+        "Sommeil et repos",
+        "Activité physique ou sorties",
+        "Recours aux réseaux sociaux ou aux contenus en ligne",
+        "Consommation de substances",
+        "Autre"
+      ]
+    },
+    "q3_other": {
+      "type": "text",
+      "required": false,
+      "max": 280
+    },
+    "q4": {
+      "type": "text",
+      "required": false,
+      "max": 700
+    },
+    "q5": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "Aucune durée minimale : ressource accessible à tout moment",
+        "Quelques jours, avec prudence",
+        "Environ une semaine",
+        "Deux semaines ou davantage",
+        "Cela dépend du contexte et des réponses"
+      ]
+    },
+    "q6": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "Laisser consulter des exercices ou ressources pratiques",
+        "Inviter à en parler à une personne de confiance",
+        "Faciliter la mise en relation avec un service d’écoute",
+        "Proposer plusieurs options, au choix du jeune",
+        "Autre"
+      ]
+    },
+    "q6_other": {
+      "type": "text",
+      "required": false,
+      "max": 280
+    },
+    "q7": {
+      "type": "multi",
+      "required": false,
+      "allowed": [
+        "Confusion avec un diagnostic ou une prise en charge",
+        "Confidentialité et sécurité des données",
+        "Interprétation excessive de variations ordinaires",
+        "Inquiétude ou alertes inadaptées",
+        "Abandon ou lassitude",
+        "Accès inégal aux ressources humaines",
+        "Autre"
+      ]
+    },
+    "q7_other": {
+      "type": "text",
+      "required": false,
+      "max": 280
+    },
+    "q8": {
+      "type": "text",
+      "required": false,
+      "max": 700
+    },
+    "q9": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "Pas du tout",
+        "Plutôt pas",
+        "Plutôt oui",
+        "Tout à fait"
+      ]
+    },
+    "q10": {
+      "type": "text",
+      "required": false,
+      "max": 700
+    },
+    "q11": {
+      "type": "text",
+      "required": false,
+      "max": 700
+    },
+    "q12": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "Psychologue",
+        "Psychiatre",
+        "Médecin",
+        "Écoutant(e) ou intervenant(e) social(e)",
+        "Chercheur/chercheuse ou autre professionnel(le)",
+        "Autre",
+        "Je préfère ne pas répondre"
+      ]
+    },
+    "q12_other": {
+      "type": "text",
+      "required": false,
+      "max": 280
+    },
+    "q13": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "Moins de 2 ans",
+        "2 à 5 ans",
+        "6 à 10 ans",
+        "Plus de 10 ans",
+        "Je préfère ne pas répondre"
+      ]
+    },
+    "q14": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "Moins de 25 ans",
+        "25 à 34 ans",
+        "35 à 44 ans",
+        "45 à 54 ans",
+        "55 ans ou plus",
+        "Je préfère ne pas répondre"
+      ]
+    },
+    "q15": {
+      "type": "single",
+      "required": false,
+      "allowed": [
+        "Femme",
+        "Homme",
+        "Intersexe",
+        "Autre / je souhaite le préciser",
+        "Je préfère ne pas répondre"
+      ]
+    },
+    "q15_other": {
+      "type": "text",
+      "required": false,
+      "max": 280
+    }
+  }
+}
